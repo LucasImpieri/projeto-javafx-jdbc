@@ -5,18 +5,21 @@ import java.io.Serializable;
 public class Department implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	
+	// Attributes 
 	private Integer id;
 	private String name;
-
+	
+	// Constructors 
 	public Department() {
 	}
-
+	
 	public Department(Integer id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
+	// G and S
 	public Integer getId() {
 		return id;
 	}
@@ -33,6 +36,8 @@ public class Department implements Serializable {
 		this.name = name;
 	}
 
+	
+	// hashCode and Equals
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -57,9 +62,12 @@ public class Department implements Serializable {
 			return false;
 		return true;
 	}
-
+	
+	// toString
 	@Override
 	public String toString() {
 		return "Department [id=" + id + ", name=" + name + "]";
 	}
+	
+	// Implements Serializable - Objetos podem ser transformaados em sequencia de bites, gravar em arquivo, trafegar em rede...
 }
